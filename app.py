@@ -114,7 +114,7 @@ def index():
     </head>
     <body>
         <div class="container">
-            <h1>Golf Club Recommender</h1>
+            <h1>Virtual Caddie</h1>
             <form action="/recommend" method="POST">
                 <label for="distance">Distance to the hole (yards):</label>
                 <input type="number" id="distance" name="distance" required>
