@@ -58,23 +58,73 @@ def index():
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Golf Club Recommender</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            h1 {
+                color: #333;
+            }
+            form {
+                margin-top: 20px;
+            }
+            label {
+                display: block;
+                margin-bottom: 8px;
+                color: #555;
+            }
+            input[type="number"], select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"] {
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #218838;
+            }
+        </style>
     </head>
     <body>
-        <h1>Golf Club Recommender</h1>
-        <form action="/recommend" method="POST">
-            <label for="distance">Distance to the hole (yards):</label><br>
-            <input type="number" id="distance" name="distance" required><br><br>
+        <div class="container">
+            <h1>Golf Club Recommender</h1>
+            <form action="/recommend" method="POST">
+                <label for="distance">Distance to the hole (yards):</label>
+                <input type="number" id="distance" name="distance" required>
 
-            <label for="lie">Lie of the ball:</label><br>
-            <select id="lie" name="lie" required>
-                <option value="fairway">Fairway</option>
-                <option value="rough">Rough</option>
-                <option value="sand">Sand</option>
-                <option value="green">Green</option>
-            </select><br><br>
+                <label for="lie">Lie of the ball:</label>
+                <select id="lie" name="lie" required>
+                    <option value="fairway">Fairway</option>
+                    <option value="rough">Rough</option>
+                    <option value="sand">Sand</option>
+                    <option value="green">Green</option>
+                </select>
 
-            <input type="submit" value="Recommend Club">
-        </form>
+                <input type="submit" value="Recommend Club">
+            </form>
+        </div>
     </body>
     </html>
     '''
@@ -92,10 +142,43 @@ def recommend():
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Recommended Club</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .container {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            h1 {
+                color: #333;
+            }
+            a {
+                display: inline-block;
+                margin-top: 20px;
+                text-decoration: none;
+                color: #007bff;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        </style>
     </head>
     <body>
-        <h1>Your Recommended Club is: {club}</h1>
-        <a href="/">Try Again</a>
+        <div class="container">
+            <h1>Your Recommended Club is: {club}</h1>
+            <a href="/">Try Again</a>
+        </div>
     </body>
     </html>
     '''
