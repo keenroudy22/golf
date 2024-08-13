@@ -7,15 +7,15 @@ def recommend_club(distance, lie):
     if lie == "fairway":
         if distance > 265:
             return "Driver"
-        elif 220 <= distance <= 265:
+        else 220 <= distance <= 265:
             return "3-Wood"    
-        else: 200 <= distance < 220
+        elif 200 <= distance < 220
             return "5-Hybrid"
         elif 187 <= distance <= 200:
             return "5-Iron"
         elif 175 <= distance < 187:
             return "6-Iron"
-        else: 160 <= distance < 175
+        elif 160 <= distance < 175
             return "7-Iron"
         elif 150 <= distance < 160:
             return "8-Iron"
@@ -23,11 +23,11 @@ def recommend_club(distance, lie):
             return "9-Iron"
         elif 110 <= distance < 143:
             return "Pitching Wedge"
-        else: 100 <= distance < 110
+        elif 100 <= distance < 110
             return "Approach Wedge - 52"
-        else: 85 <= distance < 100
+        elif 85 <= distance < 100
             return "Sand Wedge - 56"
-        else: 70 <= distance < 85
+        else: 
             return "Lob Wedge - 60"
     elif lie == "rough":
         if distance > 200:
