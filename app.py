@@ -60,8 +60,8 @@ def index():
         <title>Golf Club Recommender</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f9;
+                font-family: 'Arial', sans-serif;
+                background-color: #f0f2f5;
                 margin: 0;
                 padding: 0;
                 display: flex;
@@ -71,13 +71,16 @@ def index():
             }
             .container {
                 background-color: #fff;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 text-align: center;
+                max-width: 400px;
+                width: 100%;
             }
             h1 {
                 color: #333;
+                margin-bottom: 20px;
             }
             form {
                 margin-top: 20px;
@@ -92,18 +95,20 @@ def index():
                 padding: 10px;
                 margin-bottom: 20px;
                 border: 1px solid #ccc;
-                border-radius: 4px;
+                border-radius: 5px;
+                box-sizing: border-box;
             }
             input[type="submit"] {
-                background-color: #28a745;
+                background-color: #007bff;
                 color: #fff;
                 border: none;
                 padding: 10px 20px;
-                border-radius: 4px;
+                border-radius: 5px;
                 cursor: pointer;
+                transition: background-color 0.3s ease;
             }
             input[type="submit"]:hover {
-                background-color: #218838;
+                background-color: #0056b3;
             }
         </style>
     </head>
@@ -144,35 +149,38 @@ def recommend():
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Recommended Club</title>
             <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    background-color: #f4f4f9;
+                body {{
+                    font-family: 'Arial', sans-serif;
+                    background-color: #f0f2f5;
                     margin: 0;
                     padding: 0;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     height: 100vh;
-                }
-                .container {
+                }}
+                .container {{
                     background-color: #fff;
-                    padding: 20px;
-                    border-radius: 8px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     text-align: center;
-                }
-                h1 {
+                    max-width: 400px;
+                    width: 100%;
+                }}
+                h1 {{
                     color: #333;
-                }
-                a {
+                    margin-bottom: 20px;
+                }}
+                a {{
                     display: inline-block;
                     margin-top: 20px;
                     text-decoration: none;
                     color: #007bff;
-                }
-                a:hover {
+                }}
+                a:hover {{
                     text-decoration: underline;
-                }
+                }}
             </style>
         </head>
         <body>
@@ -193,8 +201,8 @@ def recommend():
             <title>Error</title>
             <style>
                 body {{
-                    font-family: Arial, sans-serif;
-                    background-color: #f4f4f9;
+                    font-family: 'Arial', sans-serif;
+                    background-color: #f0f2f5;
                     margin: 0;
                     padding: 0;
                     display: flex;
@@ -204,13 +212,16 @@ def recommend():
                 }}
                 .container {{
                     background-color: #fff;
-                    padding: 20px;
-                    border-radius: 8px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    padding: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     text-align: center;
+                    max-width: 400px;
+                    width: 100%;
                 }}
                 h1 {{
                     color: #333;
+                    margin-bottom: 20px;
                 }}
                 a {{
                     display: inline-block;
