@@ -5,18 +5,30 @@ app = Flask(__name__)
 # Function to determine the appropriate club based on distance and lie
 def recommend_club(distance, lie):
     if lie == "fairway":
-        if distance > 200:
+        if distance > 265:
             return "Driver"
-        elif 180 <= distance <= 200:
-            return "3-Wood"
-        elif 150 <= distance < 180:
+        elif 220 <= distance <= 265:
+            return "3-Wood"    
+        else: 200 <= distance < 220
+            return "5-Hybrid"
+        elif 187 <= distance <= 200:
             return "5-Iron"
-        elif 120 <= distance < 150:
+        elif 175 <= distance < 187:
+            return "6-Iron"
+        else: 160 <= distance < 175
             return "7-Iron"
-        elif 100 <= distance < 120:
+        elif 150 <= distance < 160:
+            return "8-Iron"
+        elif 143 <= distance < 150:
             return "9-Iron"
-        else:
+        elif 110 <= distance < 143:
             return "Pitching Wedge"
+        else: 100 <= distance < 110
+            return "Approach Wedge - 52"
+        else: 85 <= distance < 100
+            return "Sand Wedge - 56"
+        else: 70 <= distance < 85
+            return "Lob Wedge - 60"
     elif lie == "rough":
         if distance > 200:
             return "3-Wood"
